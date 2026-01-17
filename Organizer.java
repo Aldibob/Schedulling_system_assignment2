@@ -1,18 +1,15 @@
-import java.lang.String;
-
 public class Organizer {
+    private int id;
     private String name;
-    private String eventNames;
+    private String email;
 
-    public Organizer(String name) {
+    public Organizer(int id, String name, String email) {
+        this.id = id;
         this.name = name;
-    }
-    public String getName() {
-        return name;
-    }
-    @Override
-    public String toString() {
-        return eventNames;
+        this.email = email;
     }
 
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public String getEmail() { return email; }
 }

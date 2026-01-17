@@ -1,32 +1,18 @@
-public abstract class Event {
-    protected String title;
-    protected String date;
-    protected String organizer;
-    protected String location;
+public class Event {
+    private int id;
+    private String title;
+    private String date;
+    private int organizerId;
 
-    public Event(String title, String date, String organizer, String location) {
+    public Event(int id, String title, String date, int organizerId) {
+        this.id = id;
         this.title = title;
         this.date = date;
-        this.organizer = organizer;
-        this.location = location;
+        this.organizerId = organizerId;
     }
 
-    public abstract void showTimeOfStart();
-    public abstract void showTimeOfEnd();
-
-    public void showTitle() {
-        System.out.println();;
-    }
-    public void showDate() {
-        System.out.println("Date" + date);
-    }
-    public void showOrganizer() {
-        System.out.println("Organizer" + organizer);
-    }
-    public void setLocation(String location) {
-        this.location = location;
-    }
-    public void showLocation() {
-        System.out.println("Location " + location);
-    }
+    public int getId() { return id; }
+    public String getTitle() { return title; }
+    public String getDate() { return date; }
+    public int getOrganizerId() { return organizerId; }
 }
