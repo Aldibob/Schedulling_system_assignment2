@@ -1,13 +1,12 @@
-import java.util.ArrayList;
-import java.util.concurrent.Callable;
-
 public class Main {
-
     public static void main(String[] args) {
-        Comic_con comic_con = new Comic_con("Comic-con", "2025-07-13", "Astana Tourism and festival team" , "Astana , Astana arena");
-        comic_con.showLocation();
-        comic_con.showDate();
-        comic_con.displayInfoComic_con();
-        comic_con.showTitle();
+        try {
+            EventDAO.addEvent("Math Conference", "2026-05-20", 1);
+            EventDAO.getEvents();
+            EventDAO.updateEventTitle(1, "Updated Conference");
+            EventDAO.deleteEvent(1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
